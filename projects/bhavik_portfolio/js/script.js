@@ -1,4 +1,4 @@
-//setTimeout( function(){ document.querySelector('body').setAttribute('class' , 'loaded'); } , 3000 );
+setTimeout( function(){ document.querySelector('body').setAttribute('class' , 'loaded'); } , 3000 );
 
 /*
 Not needed anymore
