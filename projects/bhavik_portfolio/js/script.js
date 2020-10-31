@@ -1,5 +1,5 @@
-window.addEventListener('DOMContentLoaded', function(){
-  
+//window.addEventListener('DOMContentLoaded', function(){
+
 setTimeout( function(){ document.querySelector('body').setAttribute('class' , 'loaded'); } , 3000 );
 
 /*
@@ -310,4 +310,4 @@ function close_photo_album(){
   album.style.display='none';
   album.style.visibility = 'hidden';
 }
-});
+//});
