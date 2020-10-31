@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="JAY BHARADIA Portfolio">
+<meta name="author" content="JAY BHARADIA">
+<link rel="stylesheet" href="Styles/w3_style.css">
+<link rel="stylesheet" href="Styles/google_font_raleway.css">
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: 6px; opacity: 0.8; cursor	: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+
+		<!--=============================================================================
+			Preloader
+		===============================================================================-->
+		<div id='preloader' >
+			<div class='loader' >
+				<img src='Images/load.gif' alt='symp' >
+			</div>
+		</div>
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center"><b>JAY<br>BHARADIA</b></h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">JAY BHARADIA</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">&#9776;</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- Photo grid -->
+  <div class="w3-row" id = "photo_grid_parent">
+    <div class="w3-third">
+      <img src="Images/1.png" id = "1:1" style="width:100%" onclick="onClick(this)" alt="Image">
+      <img src="Images/2.png" id = "2:1" style="width:100%" onclick="onClick(this)" alt="Image">
+      <img src="Images/3.png" id = "3:1" style="width:100%" onclick="onClick(this)" alt="Image">
+    </div>
+
+    <div class="w3-third">
+      <img src="Images/4.png" id = "1:2" style="width:100%" onclick="onClick(this)" alt="Image">
+      <img src="Images/5.png" id = "2:2" style="width:100%" onclick="onClick(this)" alt="Image">
+      <img src="Images/6.png" id = "3:2" style="width:100%" onclick="onClick(this)" alt="Image">
+    </div>
+
+    <div class="w3-third">
+      <img src="Images/7.png" id = "1:3" style="width:100%" onclick="onClick(this)" alt="Image">
+      <img src="Images/8.png" id = "2:3" style="width:100%" onclick="onClick(this)" alt="Image">
+      <img src="Images/9.png" id = "3:3" style="width:100%" onclick="onClick(this)" alt="Image">
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#photo_grid_parent" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#photo_grid_parent" class="w3-bar-item w3-black w3-button" onclick="Change_photo_grid(this.innerText)">1</a>
+      <a href="#photo_grid_parent" class="w3-bar-item w3-button w3-hover-black" onclick="Change_photo_grid(this.innerText)">2</a>
+      <a href="#photo_grid_parent" class="w3-bar-item w3-button w3-hover-black" onclick="Change_photo_grid(this.innerText)" >3</a>
+      <a href="#photo_grid_parent" class="w3-bar-item w3-button w3-hover-black" onclick="Change_photo_grid(this.innerText)" >4</a>
+      <a href="#photo_grid_parent" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <h4><b>About Me</b></h4>
+    <img src="Images/me.jpeg" alt="Me" class="w3-image w3-padding-32" width="55%" height="650" style="border-radius:50%; transform:rotate(30deg);">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4>JAY P BHARADIA</h4>
+      <p>I believe in Knowledge because it is
+					the only thing in this world with
+					greatest power before money that will
+					stay updated at all times and will
+					empower us& nurture us. The internet
+					has enabled us to acquire Knowledge
+					and use it in our daily life and prosper
+					ourselves.
+					I like to Read Books, Write Blogs,
+					Research a lot. Books offer us a great
+					source of detailed content of almost
+					anything. I’m looking forward to work
+					with companies to enhance my skills
+					and benefit your company in many
+					ways.
+					I am a Tech geek, automated lots of
+					daily tasks on android, Experienced in
+					Windows and Linux Operating System,
+					Excellent grasp in Computer
+					Networking & Programming
+					Languages.
+      </p>
+      <p> <img src="Images/mail_icon.png" style="margin-right : 10px;"> jay.p.bharadia@gmail.com</p>
+      <p ><img src="Images/mob_icon.png" style="margin-right : 10px;"> 8104515329</p>
+      <p> <img src="Images/blogger_icon.png" style="margin-right : 10px;"> <a href="https://jpbforyou.blogspot.com" target="_blank"
+      style="text-decoration:none;">jpbforyou.blogspot.com</a></p>
+      <p> <img src="Images/linkedin_icon.png" style="margin-right : 10px;"> <a href="https://www.linkedin.com/in/jay-bharadia-1030181b4/" target="_blank"
+       style="text-decoration:none;">linkedin.com/in/jay-bharadia-1030181b4/</a></p>
+      <hr class="w3-opacity">
+      <h4 class="w3-padding-16">Technical Skills</h4>
+      <p class="w3-wide">Software Programming</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:95%">95%</div>
+      </div>
+      <p class="w3-wide">Website Development</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide">Automation | Scripting</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:80%">80%</div>
+      </div>
+      <p class="w3-wide">Blogging</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:90%">90%</div>
+      </div>
+      <p class="w3-wide">MS OFFICE</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:60%">60%</div>
+      </div>
+      <p class="w3-wide">Research & Development</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:100%">100%</div>
+      </div>
+      <p><a href="Files/My_resume.pdf"> <button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom">Download Resume</button></a></p>
+      <hr class="w3-opacity">
+
+      <h4 class="w3-padding-16">How much I charge</h4>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+            <li class="w3-padding-16">Web Design</li>
+            <li class="w3-padding-16">Photography</li>
+            <li class="w3-padding-16">5GB Storage</li>
+            <li class="w3-padding-16">Mail Support</li>
+            <li class="w3-padding-16">
+              <h2>$ 10</h2>
+              <span class="w3-opacity">per month</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button w3-white w3-padding-large">Sign Up</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="w3-half">
+          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
+            <li class="w3-padding-16">Web Design</li>
+            <li class="w3-padding-16">Photography</li>
+            <li class="w3-padding-16">50GB Storage</li>
+            <li class="w3-padding-16">Endless Support</li>
+            <li class="w3-padding-16">
+              <h2>$ 25</h2>
+              <span class="w3-opacity">per month</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button w3-white w3-padding-large">Sign Up</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact section -->
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Contact Me</b></h4>
+      <p>Do you want me to Apply My Skills in your Company for Success? Fill out the form and fill me in with the details :) I love meeting new people!</p>
+      <form action="" target="">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border" type="text" name="Name" pattern = "^[a-zA-Z ]{3,20}$" title = "Name field must contain only Alphabets and spaces upto 20 characters" placeholder="Some One Enter your name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email"
+           pattern = "^[a-zA-Z0-9][a-zA-Z0-9+_\-\.]+[a-zA-Z0-9]@[a-zA-Z0-9][a-zA-Z0-9\-\.]+[a-zA-Z0-9]\.[a-zA-Z]{2,}$"
+           title = "Enter Valid Email Address" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p style="text-align:justify;">I wrote various Blogs on my website with major category in Technology
+				Wrote various Python and Bash Scripts to automate various Tasks
+				Writer at Quora.com
+				Contributor to StackOverflow.com
+				</p>
+      </div>
+
+      <div class="w3-third">
+        <h3>BLOG POSTS</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="Images/blog1.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Tech#1</span><br>
+            <span>Must check</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="Images/blog2.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Again</span><br>
+            <span>Tech</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>POPULAR TAGS</h3>
+        <p>
+          <span class="w3-tag w3-black w3-margin-bottom">Coding</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Android</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Developer</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Blogging</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Digital Marketing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Automation</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Programming	</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Writing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Reading</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Research</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Python</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Technology</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">Made with &#10084; by JAY.B & Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity" style="text-decoration:none;">w3.css</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Photo Grid Pages 1,2,3.. Change photos function
+function Change_photo_grid(photo_album_no) {
+	var solo_photo , no = 0 , i, j;
+	var photo_grid_var = document.getElementById('photo_grid_parent');
+	var album_slice = photo_grid_var.children;
+
+	switch(photo_album_no)
+	{
+		case "1":
+			no = 0;
+			break;
+		case "2":
+			no = 9;
+			break;
+		case "3":
+			no = 18;
+			break;
+		case "4":
+			no = 27;
+			break;
+		default:
+			no = 0;
+	}
+		for( i=0; i < album_slice[0].childElementCount; i++ )
+		{
+			solo_photo = album_slice[i].children;
+			for( j=0; j < album_slice[i].childElementCount; j++ )
+			{
+				no = no + 1;
+				solo_photo[j].src = "Images/" + no + ".png";
+			}
+
+		}
+}
+
+/* Stop Preloader Plugin */
+
+		setTimeout( function(){ document.getElementsByTagName("body")[0].classList.add("loaded"); } , 1200 );
+
+
+
+
+</script>
+
+<script src='js/smoothscroll.js' ></script>
+
+</body>
+</html>

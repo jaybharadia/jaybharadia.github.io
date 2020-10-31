@@ -1634,7 +1634,8 @@ body .symp-btn{
 	line-height:1em;
 }
 .portfolio-items > .item > .inner > .caption > .caption-inner > .links > li > a:hover{
-	
+	background:#FFF;
+	background:rgba(255,255,255,.9);
 	color:#333;
 }
 #portfolio-filters{
