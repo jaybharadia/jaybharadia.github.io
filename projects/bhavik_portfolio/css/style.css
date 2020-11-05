@@ -589,7 +589,11 @@ body .symp-btn{
 	left:0;
 }
 
-.about-icons.section-block .hexagon.icon svg path, .services-section .service .hexagon.icon svg path{
+.about-icons.section-block .hexagon.icon svg path,
+.about-icons.section-block .hexagon.icon svg polygon,
+ .services-section .service .hexagon.icon svg path,
+ .services-section .service .hexagon.icon svg polygon
+ {
 	fill:#B7A389;
 }
 .service > .hexagon.icon > i{
@@ -723,11 +727,15 @@ body .symp-btn{
 }
 
 
-.testimonials-block .controls .hexagon.pagination svg path{
+.testimonials-block .controls .hexagon.pagination svg path,
+.testimonials-block .controls .hexagon.pagination svg polygon
+{
 	fill:#ccc;
 }
 
-.testimonials-block .controls .hexagon.pagination.active svg path{
+.testimonials-block .controls .hexagon.pagination.active svg path,
+.testimonials-block .controls .hexagon.pagination.active svg polygon
+{
 	fill:#B7A389;
 }
 /************* Footer ****************/
@@ -1006,7 +1014,9 @@ body.section-show .close-btn{
 	transform:translateX(-50%);
 }
 
-.timeline > li:not(.timeline-header) svg path{
+.timeline > li:not(.timeline-header) svg path,
+.timeline > li:not(.timeline-header) svg polygon
+{
 	fill:#B7A389;
 }
 
@@ -1055,7 +1065,9 @@ body.section-show .close-btn{
 }
 
 
-.hobby .icon svg path{
+.hobby .icon svg path,
+.hobby .icon svg polygon
+{
 	fill:#B7A389;
 }
 .hobby:hover > .icon{
@@ -1273,7 +1285,8 @@ body.section-show .close-btn{
 	left:0;
 
 }
-.process > .number svg path{
+.process > .number svg path,
+.process > .number svg polygon{
 	fill:#B7A389;
 }
 .process > .number > span{
@@ -1358,7 +1371,8 @@ body.section-show .close-btn{
 	-webkit-transform: translateY(-50%);
 }
 
-#portfolio-filters > ul > li svg path{
+#portfolio-filters > ul > li svg path,
+#portfolio-filters > ul > li svg polygon{
 	fill: #B7A389;
 }
 
@@ -1486,7 +1500,9 @@ body.section-show .close-btn{
 	left:0;
 }
 
-.portfolio-items > .item > .inner > .caption > .caption-inner > .links > li svg path{
+.portfolio-items > .item > .inner > .caption > .caption-inner > .links > li svg path,
+.portfolio-items > .item > .inner > .caption > .caption-inner > .links > li svg polygon
+{
 	fill : #F5F5F5;
 }
 

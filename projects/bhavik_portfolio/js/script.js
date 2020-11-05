@@ -14,7 +14,7 @@ function getsetwidth_testimonials(){
 //setInterval(getsetwidth_testimonials , 2000);
 
 /********** Custom SVG Hexagon design *************/
-var svg_hexagon =   '<!--- Hexagon SVG with Dynamic width , height ----------------->\
+var svg_hexagon =   '<!--- Hexagon SVG with Dynamic width , height -->\
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"\
   xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="200px" height="200px" x="0" y="0"\
   viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">\
